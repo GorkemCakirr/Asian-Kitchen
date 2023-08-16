@@ -111,7 +111,7 @@ const menu = [
 
 
 function menuAll(menu){
-
+menuCardBody.innerHtml = ""
 const menuSon = menu.map(function(item){
     const menuItems = document.createElement("div")
     menuItems.className = "menu-items col-lg-6 col-sm-12"
@@ -187,7 +187,9 @@ navBarKorea.addEventListener("click",korea)
       const menuKorea =  menu.filter(function(item){
         return item.category == "Korea"
       })
-      
      return menuAll(menuKorea)
           }
+window.addEventListener("DomContentLoaded", () => {
+    menuAll(menu)
+})
     
